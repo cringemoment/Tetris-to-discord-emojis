@@ -12,7 +12,7 @@ blocksize = 32
 blockwidth = 2
 
 pygame.init()
-s = pygame.display.set_mode((blocksx * blocksize + 10 * blocksize, blocksy * blocksize + 18 * blocksize))
+s = pygame.display.set_mode((blocksx * blocksize + 8 * blocksize, blocksy * blocksize + 16 * blocksize))
 s.fill((20, 20, 20))
 
 def grid(startx, starty, blocksx, blocksy, blocksize, blockwidth):
@@ -34,13 +34,6 @@ def blockrenderer(x, y, color, smaller = False):
 
 piecesindex = {
     "I": (0, 255, 255),
-    "Z": (255, 0, 0),
-    "S": (0, 255, 0),
-    "J": (0, 0, 255),
-    "L": (255, 100, 0),
-    "T": (255, 0, 255),
-    "O": (255, 255, 0),
-    "G": (156, 156 , 156),
     " ": (20, 20, 20)
 }
 
@@ -76,8 +69,8 @@ def makeboard():
 
 seperateframe = False
 
-pieces = "IZSJLTOG "
-pieceemojis = [":blue_square:", ":red_square:", ":green_square:", ":ballot_box_with_check:", ":orange_square:", ":purple_square:", ":yellow_square:", ":grey_exclamation:", ":black_large_square:"]
+pieces = "I "
+pieceemojis = [":pg:",":black_large_square:"]
 
 def outputcode():
     global board
